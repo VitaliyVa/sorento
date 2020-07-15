@@ -1,0 +1,410 @@
+.nav-bar {
+    position: relative;
+}
+.tell_svg {
+    path {
+        transition: all .2s;
+    }
+}
+.nav {
+    &_bar {
+        z-index: 99999;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85px;
+        width: 100%;
+        background: rgba(31,31,31,1);
+        background: -moz-linear-gradient(top, rgba(31,31,31,1) 0%, rgba(31,31,31,0.73) 54%, rgba(31,31,31,0.5) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,31,31,1)), color-stop(54%, rgba(31,31,31,0.73)), color-stop(100%, rgba(31,31,31,0.5)));
+        background: -webkit-linear-gradient(top, rgba(31,31,31,1) 0%, rgba(31,31,31,0.73) 54%, rgba(31,31,31,0.5) 100%);
+        background: -o-linear-gradient(top, rgba(31,31,31,1) 0%, rgba(31,31,31,0.73) 54%, rgba(31,31,31,0.5) 100%);
+        background: -ms-linear-gradient(top, rgba(31,31,31,1) 0%, rgba(31,31,31,0.73) 54%, rgba(31,31,31,0.5) 100%);
+        background: linear-gradient(to bottom, rgba(31,31,31,1) 0%, rgba(31,31,31,0.73) 54%, rgba(31,31,31,0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f1f1f', endColorstr='#1f1f1f', GradientType=0 );
+    }
+    &_left__block {
+        display: flex;
+        align-items: center;
+    }
+    &_right__block {
+        display: flex;
+        align-items: center;
+    }
+    &_center__block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            height: 100%;
+            margin-top: 45px;
+        }
+    }
+
+
+    &_tell {
+        width: 170px;
+        display: flex;
+        align-items: center;
+
+        svg {
+            transition: all .2s;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            .tell {
+                color: #f28500;
+            }
+            .tell_svg {
+                path {
+                    fill: #f28500;
+                }
+                
+            }
+        }
+    }
+    &_menu {
+        position: relative;
+        width: 85px;
+        height: 85px;
+        background: #b1d628;
+        margin-right: 50px;
+        cursor: pointer;
+        
+    }
+}
+
+.lang__block {
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.lang_item {
+    transition: all .2s;
+    margin-left: 15px;
+    opacity: 0.5;
+    border-bottom: 1px solid transparent;
+
+
+    &_active {
+        opacity: 1;
+        border-bottom: 1px solid #f28500;
+    }
+}
+.tell {
+    transition: all .2s;
+    text-decoration: none;
+}
+.tell_svg {
+    transition: all .2s;
+}
+.shop__block {
+    height: 85px;
+    width: 85px;
+    background: #f28500;
+    position: relative;
+    
+}
+.shop_counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0f0f;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 2px;
+}
+.menu_anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+}
+.menu_line {
+    transition: all 330ms ease-out;
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    border-radius: 20px;
+    background: #fff;
+    
+    &_1 {
+        top: 0px;
+    }
+    &_2 {
+        width: 18px;
+        bottom: 0;
+    }
+}
+.nav_menu_active {
+    .menu_line {
+        &_1 {
+            top: 5px;
+            transform: rotate(135deg);
+        }
+        &_2 {
+            width: 100%;
+            transform: rotate(-135deg);
+            bottom: 7px;
+        }
+    }
+    
+}
+.nav {
+    &_content {
+        padding-top: 400px;
+        transition: all 330ms ease-out;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: -100%;
+        background: #1f1f1f;
+        z-index: 999;
+        &_active {
+            left: 0;
+        }
+    }
+    &_container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &_title__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    &_item {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #b1d628  50%, transparent 50%);
+        &_2 {
+            background: linear-gradient(to bottom, transparent 50%, #b1d628 50%);
+        }
+    }
+    &_soc__block {
+        margin-top: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &_soc_title {
+        text-align: center;
+        opacity: 0.5;
+        margin-bottom: 15px;
+    }
+}
+.soc {
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+    &_item {
+        transition: all .2s;
+        margin: 0px 5px;
+        svg {
+            path {
+                transition: all .2s;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: #f28500;
+                }
+            }
+        }
+    }
+}
+.nav_title {
+    transition: all .2s;
+        &:hover {
+            color: #f28500;
+        }
+}
+.adress {
+    &_label {
+        opacity: 0.5;
+    }
+    &_name {
+        margin-top: 3px;
+        transition: all .2s;
+
+        &:hover {
+            color: #f28500;
+        }
+
+    }
+}
+.nav_adress__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    width: 80%;
+    max-width: 1000px;
+}
+.abs_nav_1 {
+    position: absolute !important;
+    bottom: 80px;
+    left: 50px;
+}
+.abs_nav_2 {
+    position: absolute !important;
+    bottom: 30px;
+    right: 0px;
+}
+.abs_nav_3 {
+    position: absolute !important;
+    top: 200px;
+    right: 150px;
+}
+.animate_block {
+    position: relative;
+    transition: all .4s;
+    opacity: 0;
+    bottom: -40px;
+
+    &_active {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+.bg_first_sect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 992px) {
+    .lang__block {
+        position: absolute;
+        opacity: 0;
+        transition: all .3s;
+        top: -100%;
+        right: 0;
+
+    }
+    .nav_tell {
+        position: absolute;
+        opacity: 0;
+        transition: all .3s;
+        top: -100%;
+        left: 50px;
+
+    }
+    .nav_bar_active {
+        .lang__block {
+            position: absolute;
+            top: 130px;
+            right: 0;
+            opacity: 1;
+        }
+        .nav_tell {
+            position: absolute;
+            top: 130px;
+            left: 50px;
+            opacity: 1;
+        }
+    }
+    .abs_nav_3 {
+        top: 150px;
+        right: 30px;
+        width: 100px;
+    }
+    .nav_content {
+        overflow: hidden;
+    }
+    .nav_title__block {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        width: max-content;
+
+    }
+    .nav_content {
+        padding-top: 180px;
+    }
+    .nav_item {
+        display: none;
+    }
+    .nav_title {
+        margin-bottom: 25px;
+    }
+    .abs_nav_1 {
+        width: 200px;
+        bottom: 400px;
+    }
+    .nav_soc__block {
+        margin-top: 100px;
+    }
+    .abs_nav_2 {
+        bottom: 30px;
+        right: -115px;
+    }
+    .nav_adress__block {
+        flex-direction: column;
+    }
+    .adress_label {
+        text-align: center;
+    }
+    .adress_item {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 710px) {
+    .nav_menu, .shop__block {
+        width: 45px;
+        height: 45px;
+    }
+    .nav_bar {
+        height: 45px;
+    }
+    .nav_center__block img {
+        margin-top: 30px;
+        width: 90px;
+    }
+    .shop_counter {
+        top: 2px;
+        right: 2px;
+    }
+    .nav_bar_active .nav_tell {
+        top: 70px;
+    }
+    .nav_bar_active .lang__block {
+        top: 70px;
+    }
+    .nav_content {
+        padding-top: 100px;
+    }
+    .nav_soc__block {
+        margin-top: 0px;
+    }
+    .adress_item {
+        text-align: center;
+    }
+    .nav_adress__block {
+        bottom: 20px;
+    }
+}
